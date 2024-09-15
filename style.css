@@ -429,6 +429,6 @@ form input, form textarea{
     display: inline-block; /* Treats the iframe as an inline element for centering */
     margin: 20px auto 80px auto; /* Adjust top margin to move iframe up */
     width: 100%;
-    max-width: 1000px; 
+    max-width: 900px; 
     height: 4000px; /* Adjust height as needed */
 }
