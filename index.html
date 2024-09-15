@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hezekiah Gitenyi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="Images/Weblogo prog.png" type="image/png">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <!-- Navigation Bar -->
+            <nav>
+                <img src="Images/bannerlogo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header"></a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Main Text -->
+            <div class="header-text">
+                <p>Software Programmer</p>
+                <h1>Hi, I'm <span>Hezekiah</span> Gitenyi <br> From the United States</h1>
+            </div>
+        </div>
+    </div>
+    <!-- About Me -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <!-- Image of Me -->
+                <div class="about-col-1">
+                    <img src="Images/gradphoto.JPG" height="650" id="profile-photo">
+                </div>
+                <!-- Bio -->
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="about-p"> I am a Senior attending Wylie High School. I am proficient in C++ and Python. 
+                        Programming as a means to solve problems is a concept I have grown to appreciate. 
+                        Often the silent workhorse behind what makes much of what is possible today work, 
+                        I want to learn how to master and leverage computer science and robotics to solve the world's toughest challenges. 
+                    </p>
+                    <!-- Skills Experience Education Tabs -->
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <!-- Skills -->
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span><i class="fa-brands fa-python"></i> Python</span><br>Creating applications and programs</li>
+                            <li><span><i class="fa-brands fa-html5"></i> HTML</span><br>Creating web applications</li>
+                            <li><span><i class="fa-brands fa-css3-alt"></i> CSS</span><br>Desinging web applications</li>
+                            <li><span><i class="fa-solid fa-robot"></i> C++</span><br>Programming VEX robots</li>
+                            <li><span><i class="fa-solid fa-ruler-combined"></i> Fusion 360</span><br>Designing and creating VEX robots</li>
+                        </ul>
+                    </div>
+                    <!-- Experience -->
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span><i class="fa-solid fa-code"></i> Programming</span><br> In the context of my robotics class, I have extensively employed VEX coding software, primarily centered around C++. 
+                                Additionally, I augment my programming skills through an online Harvard CS50 course during the summer. 
+                                The course covered a diverse range of languages, including Python, HTML, and CSS, though my emphasis and substantial practice were concentrated on C++. 
+                                In my Advanced Placement (AP) Computer Science class, we are currently engaged in a Python boot camp, focusing on developing most of our projects using Python.</li>
+
+                            <li><span><i class="fa-solid fa-robot"></i> Robotics</span><br>Exercising proficiency in C++ as part of the Future Black Engineers team, wherein I develop software for a competition-grade robot. 
+                                Our achievements include securing the 43rd position statewide. 
+                                I have also engineered a Proportional-Integral-Derivative (PID) loop, facilitating robot navigation through a maze utilizing the integration of distance sensors and inertial sensors.
+                                </li>
+                        </ul>
+                    </div>
+                    <!-- Education -->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span><i class="fa-solid fa-graduation-cap"></i> August 2021 - May 2025</span><br>Wylie High School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- Portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class = "sub-title">My Projects</h1>
+            <div class="work-list">
+                <!-- Work Items Just Duplicte -->
+                <div class="work">
+                    <a href="project1.html" target="_self"><img src="Images/memgame.JPG"/></a>
+                    <!-- Image Description -->
+                    <div class="layer">
+                        <h3>Memorization Tool</h3>
+                        <p>Using lists of diffrent difficulties, the player is asked if they remember the word or not.</p>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <a href="project2.html" target="_self"><img src="Images/pix-vertical-placeholder.jpg"/></a>
+                    <!-- Image Description -->
+                    <div class="layer">
+                        <h3>VEX Robot</h3>
+                        <p>Description</p>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <a href="project3.html" target="_self"><img src="Images/pix-vertical-placeholder.jpg"/></a>
+                    <!-- Image Description -->
+                    <div class="layer">
+                        <h3>Project Title</h3>
+                        <p>Description</p>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-button">
+                <button onclick="window.location.href='moreproj.html'">More Projects</button>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Information -->
+     <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p> <i class="fa-solid fa-paper-plane"></i> hezekiahgitenyi24@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/hezekiah-gitenyi-927282280/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Hezxkiah" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your First & Last Name" required>
+                        <!-- <input type="text" name="Last Name" placeholder="Last Name" required> -->
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="form-submit-button">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Hezekiah Gitenyi</p>
+        </div>
+     </div>
+
+
+
+    <!-- How the about me tab links switch around -->
+    <script>
+        var tablinks = document.getElementsByClassName('tab-links');
+        var tabcontents = document.getElementsByClassName('tab-contents');
+            
+        function opentab(tabname) {
+            for (let tablink of tablinks) {
+                tablink.classList.remove('active-link');
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove('active-tab');
+            }
+            document.querySelector(`[onclick="opentab('${tabname}')"]`).classList.add('active-link');
+            document.getElementById(tabname).classList.add('active-tab');
+        }
+    </script>
+
+    <!-- Script to upload information to a spreadsheet -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzadk_OzM8N0MCGEnSLLRKBn6UrZkC-nQR2IICnjJGQBOhWuAtyyDMVDLZaaqp9HwFO/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Thank You! Message Sent!" 
+                setTimeout(function(){
+                    msg.innerHTML=""},5000)})
+                    form.reset()
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    
+</body>
+</html>
