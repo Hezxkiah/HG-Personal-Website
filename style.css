@@ -420,21 +420,3 @@ form input, form textarea{
 .portfolio-button button:hover {
     background-color: #282c33; /* Darker green on hover */
 }
-
-pre {
-    background-color: #2d2d2d;  /* Dark background */
-    color: #f8f8f2;             /* Light text */
-    padding: 20px;
-    border-radius: 5px;
-    font-family: 'Courier New', Courier, monospace;  /* Monospaced font */
-    overflow-x: auto;  /* Horizontal scroll for long lines */
-    white-space: pre-wrap;  /* Wrap long lines */
-    line-height: 1.5;
-    border: 1px solid #ddd;
-  }
-  
-  /* General code styling */
-  code {
-    font-size: 14px;
-    color: #f8f8f2; /* Default text color */
-  }
