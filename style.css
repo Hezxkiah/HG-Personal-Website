@@ -401,6 +401,13 @@ form input, form textarea{
     height: auto; 
 }
 
+.project img {
+    margin: 40px auto 80px auto; /* Adds 40px of space above and 80px below, centers video */
+    width: 100%;
+    max-width: 400px; 
+    height: auto; 
+}
+
 .portfolio-button {
     text-align: center; /* Center the button */
     margin-top: 40px; /* Adds space between portfolio and the button */
