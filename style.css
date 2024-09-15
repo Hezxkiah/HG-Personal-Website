@@ -401,13 +401,6 @@ form input, form textarea{
     height: auto; 
 }
 
-.project img {
-    margin: 40px auto 80px auto; /* Adds 40px of space above and 80px below, centers video */
-    width: 100%;
-    max-width: 400px; 
-    height: auto; 
-}
-
 .portfolio-button {
     text-align: center; /* Center the button */
     margin-top: 40px; /* Adds space between portfolio and the button */
@@ -426,4 +419,16 @@ form input, form textarea{
 
 .portfolio-button button:hover {
     background-color: #282c33; /* Darker green on hover */
+}
+
+#code-segment {
+    text-align: center; /* Centers the iframe horizontally */
+}
+
+#code-segment iframe {
+    display: inline-block; /* Treats the iframe as an inline element for centering */
+    margin: 20px auto 80px auto; /* Adjust top margin to move iframe up */
+    width: 100%;
+    max-width: 1000px; 
+    height: 4000px; /* Adjust height as needed */
 }
