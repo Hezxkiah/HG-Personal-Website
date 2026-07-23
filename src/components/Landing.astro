@@ -1,32 +1,97 @@
 ---
+import { Picture } from "astro:assets";
+import ProjArr from '@assets/landing/arrow-down.svg'
 ---
 <section id="Landing">
     <div id="landing-text">
-        <p>Work In Progress</p>
+        <div id="status">
+            <span id="dot"></span>
+            <span>Available for Software or Data Engineering Roles</span>
+        </div>
+        <h1>Software Engineer</h1>
+        <p>Sophomore CS & Math major at Texas A&M. 
+            <br> Organizer for <u><a href="https://tamuhack.org/" id="mention" target="_blank">@TAMUhack</a></u> and ship 
+            projects on the side
+        </p>
+        <div id="projects-scroll" onclick="document.getElementById('Projects').scrollIntoView({ behavior: 'smooth' })">
+            <p>Projects</p>
+            <Picture
+                src={ProjArr}
+                alt={''}
+                formats={["svg","avif","webp"]}
+                densities={[1,2]}
+                quality={80}
+                aria-hidden="true"
+                loading={"eager"}
+                fetchpriority={"high"}
+                width={20}
+                height={20}
+            />
+        </div>
     </div>
 </section>
 
 <style>
+    /* Landing Text */
     #Landing{
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
-        min-height: 100vh;
+        min-height: 60vh;
         width: 100%;
+        margin-left: 10rem;
+    }
+    #landing-text h1 {
+        font-size: clamp(1rem, 8vw, 4rem);
+        text-align: left;
     }
     #landing-text p {
-        /* Scales smoothly between 2rem and 6rem depending on screen size */
-        font-size: clamp(2rem, 8vw, 6rem);
-        text-align: center;
-        font-weight: bold;
-        animation: bob 2s ease-in-out infinite;
+        color: #ABAEB0;
+        font-size: clamp(0.5rem, 8vw, 1.5rem);
+        text-align: left;
     }
-    @keyframes bob {
+    #status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: monospace;
+        color: #ABAEB0;
+        font-size: 0.9rem;
+    }
+    #dot {
+        width: 10px;
+        height: 10px;
+        background-color: #4ade80;
+        border-radius: 50%;
+        animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
         0%, 100% {
-            transform: translateY(0);
+            box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6);
         }
         50% {
-            transform: translateY(-20px);
+            box-shadow: 0 0 0 6px rgba(74, 222, 128, 0);
         }
+    }
+    #mention {
+        color: #6D6F70;
+        transition: color 0.2s ease;
+    }
+    #mention:hover {
+        color: white;
+    }
+    #projects-scroll {
+        padding-top: 1.5rem;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+        filter: brightness(0) invert(1);
+    }
+    #projects-scroll p{
+        font-size: 0.9rem;
+    }
+    #projects-scroll:hover {
+        opacity: 0.5;
     }
 </style>

@@ -1,0 +1,73 @@
+---
+import { Picture } from "astro:assets";
+import GitHub from '@assets/menu/github-icon.svg'
+import LinkedIn from '@assets/menu/linkedin-icon.svg'
+---
+<section id="Menu">
+    <div id="menu-bar-text">
+        <p>Hezekiah<br>Gitenyi</p>
+    </div>
+    <div id="menu-bar-socials">
+        <a href="https://github.com/Hezxkiah" target="_blank" id="Github">
+            <Picture
+                src={GitHub}
+                alt={''}
+                formats={["svg","avif","webp"]}
+                densities={[1,2]}
+                quality={80}
+                aria-hidden="true"
+                loading={"eager"}
+                fetchpriority={"high"}
+                width={35}
+                height={35}
+            />
+        </a>
+        <a href="https://www.linkedin.com/in/hezekiah-gitenyi/" target="_blank" id="Linkedin">
+            <Picture
+                src={LinkedIn}
+                alt={''}
+                formats={["svg","avif","webp"]}
+                alt=""
+                densities={[1,2]}
+                quality={80}
+                aria-hidden="true"
+                loading={"eager"}
+                fetchpriority={"high"}
+                width={35}
+                height={35}
+            />              
+        </a>
+    </div>
+</section>
+
+<style>
+    #Menu {
+        display: flex;
+        margin-top: 5vh;
+        width: 100%;
+    }
+
+    #menu-bar-text {
+        flex: auto;
+        font-size: clamp(1rem, 2vw, 2rem);
+        margin-left: 10rem;
+    }
+
+    #menu-bar-text p {
+        text-align: left;
+        margin: 0;
+    }
+    #menu-bar-socials {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding-right: 10rem;
+    }
+    #Github,
+    #Linkedin {
+        display: flex;
+        align-items: center;
+        filter: brightness(0) invert(1);
+        display: block;
+    }
+</style>
