@@ -15,18 +15,7 @@ import ProjArr from '@assets/landing/arrow-down.svg'
         </p>
         <div id="projects-scroll" onclick="document.getElementById('Projects').scrollIntoView({ behavior: 'smooth' })">
             <p>Projects</p>
-            <Picture
-                src={ProjArr}
-                alt={''}
-                formats={["svg","avif","webp"]}
-                densities={[1,2]}
-                quality={80}
-                aria-hidden="true"
-                loading={"eager"}
-                fetchpriority={"high"}
-                width={20}
-                height={20}
-            />
+            <img src={ProjArr.src} alt="" width="20" height="20" />
         </div>
     </div>
 </section>
