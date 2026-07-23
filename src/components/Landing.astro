@@ -6,12 +6,12 @@ import ProjArr from '@assets/landing/arrow-down.svg'
     <div id="landing-text">
         <div id="status">
             <span id="dot"></span>
-            <span>Available for Software or Data Engineering Roles</span>
+            <span>Available for new opporunites</span>
         </div>
         <h1>Software Engineer</h1>
         <p>Sophomore CS & Math major at Texas A&M. 
-            <br> Organizer for <u><a href="https://tamuhack.org/" id="mention" target="_blank">@TAMUhack</a></u> and ship 
-            projects on the side
+            <br> Organizer for <u><a href="https://tamuhack.org/" id="mention" target="_blank">@TAMUhack</a></u> and I ship 
+            projects on the side.
         </p>
         <div id="projects-scroll" onclick="document.getElementById('Projects').scrollIntoView({ behavior: 'smooth' })">
             <p>Projects</p>
@@ -25,9 +25,10 @@ import ProjArr from '@assets/landing/arrow-down.svg'
     #Landing{
         display: flex;
         justify-content: left;
-        align-items: center;
-        min-height: 60vh;
+        align-items: flex-start;
+        min-height: 100vh;
         width: 100%;
+        margin-top: 10rem;
         margin-left: 10rem;
     }
     #landing-text h1 {
@@ -74,13 +75,28 @@ import ProjArr from '@assets/landing/arrow-down.svg'
         display: inline-flex;
         align-items: center;
         cursor: pointer;
-        transition: opacity 0.2s ease;
+        gap: 0.25rem;
+    }
+
+    #projects-scroll img {
+        filter: brightness(0) invert(0.67);
+        transition: filter 0.2s ease;
+        width: 20px;
+        height: 20px;
+    }
+
+    #projects-scroll p {
+        color: #ABAEB0;
+        font-size: 1rem;
+        margin: 0;
+        transition: color 0.2s ease;
+    }
+
+    #projects-scroll:hover img {
         filter: brightness(0) invert(1);
     }
-    #projects-scroll p{
-        font-size: 0.9rem;
-    }
-    #projects-scroll:hover {
-        opacity: 0.5;
+
+    #projects-scroll:hover p {
+        color: white;
     }
 </style>

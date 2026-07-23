@@ -1,0 +1,112 @@
+---
+import { Picture } from "astro:assets";
+import F1Car from '@assets/projects/formula-1.avif'
+import RepoArr from '@assets/projects/arrow-up-right.png'
+const techs = ['Python', 'FastF1', 'Pandas', 'NumPy', 'Linear Regression'];
+---
+<div id="project-card">
+    <div class="img-wrap">
+        <Picture
+            src={F1Car}
+            alt={''}
+            formats={["avif","webp"]}
+            densities={[1,2]}
+            quality={80}
+            aria-hidden="true"
+            loading={"eager"}
+            fetchpriority={"high"}
+        />
+    </div>
+    
+    <div id="project-description">
+        <h1>Formula-1 Tire Model</h1>
+        <p>By utilizing linear regression on lap data collected via FastF1, 
+            I concluded that in the 2024 Bahrain Grand Prix, 
+            HARD tires completed an average-length stint approximately 21 seconds faster in aggregate than SOFT tires. 
+            Despite SOFT tires offering a faster base pace, 
+            their degradation rate of 0.116 s/lap versus 0.066 s/lap for HARD meant that over a full stint, 
+            the HARD compound's durability outweighed the SOFT's early pace advantage, 
+            making it the more strategically efficient choice at this circuit.
+        </p>
+        <div id="tech-stack">
+            {techs.map(tech => (
+                <span class="bubble">{tech}</span>
+            ))}
+        </div>
+        <div id="repo-link">
+            <a href="https://github.com/Hezxkiah/F1-Tire-Model" target="_blank">
+            <p>Github</p>
+            <img src={RepoArr.src} alt="" />
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+    #project-card {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+    }
+    #project-card h1{
+        font-size: 2rem;
+    }
+    .img-wrap {
+        width: 500px;
+        height: 360px;
+        flex-shrink: 0;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    .img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #tech-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    .bubble {
+        border: 1px solid #3e3e3e;
+        border-radius: 999px;
+        padding: 0.3rem 0.85rem;
+        font-size: 0.85rem;
+        color: #ABAEB0;
+        font-family: monospace;
+    }
+    #repo-link{
+        padding-top: 1.5rem;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        gap: 0.25rem;
+    }
+    #repo-link a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        text-decoration: none;
+    }
+    #repo-link img{
+        filter: brightness(0) invert(0.67);
+        transition: filter 0.2s ease;
+        width: 20px;
+        height: 20px;
+    }
+    #repo-link p{
+        color: #ABAEB0;
+        font-size: 1rem;
+        margin: 0;
+        transition: color 0.2s ease;
+    }
+    #repo-link:hover img {
+        filter: brightness(0) invert(1);
+    }
+
+    #repo-link:hover p {
+        color: white;
+    }
+</style>
