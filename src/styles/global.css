@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --desktop-breakpoint: 64rem;
+  --widescreen-breakpoint: 96rem;
+}
+
+html {
+  font-family: "Work Sans", sans-serif;
+  color: white;
+  overflow-x: hidden;
+}

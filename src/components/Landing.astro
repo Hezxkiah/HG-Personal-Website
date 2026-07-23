@@ -1,0 +1,32 @@
+---
+---
+<section id="Landing">
+    <div id="landing-text">
+        <p>Work In Progress</p>
+    </div>
+</section>
+
+<style>
+    #Landing{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        width: 100%;
+    }
+    #landing-text p {
+        /* Scales smoothly between 2rem and 6rem depending on screen size */
+        font-size: clamp(2rem, 8vw, 6rem);
+        text-align: center;
+        font-weight: bold;
+        animation: bob 2s ease-in-out infinite;
+    }
+    @keyframes bob {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+</style>
