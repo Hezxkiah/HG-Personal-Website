@@ -2,17 +2,21 @@
 import { Picture } from "astro:assets";
 import GitHub from '@assets/menu/github-icon.svg'
 import LinkedIn from '@assets/menu/linkedin-icon.svg'
+import Email from '@assets/menu/email-icon.svg'
 ---
 <section id="Menu">
     <div id="menu-bar-text">
-        <p>Hezekiah<br>Gitenyi</p>
+        <p>© Hezekiah Gitenyi</p>
     </div>
     <div id="menu-bar-socials">
         <a href="https://github.com/Hezxkiah" target="_blank" id="Github">
-            <img src={GitHub.src} alt="" width="35" height="35" />
+            <img src={GitHub.src} alt="" width="20" height="20" />
         </a>
         <a href="https://www.linkedin.com/in/hezekiah-gitenyi/" target="_blank" id="Linkedin">
-            <img src={LinkedIn.src} alt="" width="35" height="35" />            
+            <img src={LinkedIn.src} alt="" width="20" height="20" />            
+        </a>
+        <a href="mailto:hezekiahgitenyi24@gmail.com" target="_blank" id="Email">
+            <p>hezekiahgitenyi24@gmail.com</p>        
         </a>
     </div>
 </section>
@@ -20,12 +24,13 @@ import LinkedIn from '@assets/menu/linkedin-icon.svg'
 <style>
     #Menu {
         display: flex;
-        margin-top: 5vh;
+        margin-top:5vh;
+        margin-bottom: 10vh;
         width: 100%;
     }
     #menu-bar-text {
         flex: auto;
-        font-size: clamp(1rem, 2vw, 2rem);
+        font-size: clamp(0.5rem, 2vw, 1rem);
         margin-left: 10rem;
     }
 
@@ -36,7 +41,7 @@ import LinkedIn from '@assets/menu/linkedin-icon.svg'
     #menu-bar-socials {
         display: flex;
         align-items: center;
-        gap: 2rem;
+        gap: 1rem;
         padding-right: 10rem;
     }
     #Github,
@@ -45,23 +50,45 @@ import LinkedIn from '@assets/menu/linkedin-icon.svg'
         align-items: center;
         filter: brightness(0) invert(1);
         transition: opacity 0.2s ease;
-        display: block;
     }
+
+    #Email {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        filter: brightness(0) invert(1);
+        transition: opacity 0.2s ease;
+        text-decoration: none;
+    }
+
+    #Email p {
+        margin: 0;
+        color: white;
+        font-size: clamp(0.5rem, 2vw, 1rem);
+    }
+
     #Github:hover,
-    #Linkedin:hover {
+    #Linkedin:hover,
+    #Email:hover {
         opacity: 0.5;
     }
     @media (max-width: 768px) {
         #Menu {
+            flex-direction: column;
             align-items: center;
-            padding: 0 1.5rem;
+            padding: 0 2.5rem;
+            gap: 1rem;
         }
         #menu-bar-text {
-            margin-left: 2.1rem
+            font-size: clamp(1rem, 1vw, 2.5rem);
+            margin-left: 0.5rem;
         }
         #menu-bar-socials {
-            padding-right: 2rem;
+            padding-right: 0.5rem;
             gap: 1rem;
+        }
+        #Email p {
+            font-size: 1rem;
         }
     }
 </style>

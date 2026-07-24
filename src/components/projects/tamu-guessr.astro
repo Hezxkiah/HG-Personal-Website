@@ -1,15 +1,15 @@
 ---
 import { Picture } from "astro:assets";
-import F1Car from '@assets/projects/formula-1.avif'
+import TAMUGuessr from '@assets/projects/tamu-guessr.png'
 import RepoArr from '@assets/projects/arrow-up-right.png'
-const techs = ['Python', 'FastF1', 'Pandas', 'NumPy', 'Linear Regression'];
+const techs = ['Next.js', 'Tailwind CSS', 'Google Maps API', 'React', 'Javascript'];
 ---
 <div id="project-card">
     <div class="img-wrap">
         <Picture
-            src={F1Car}
+            src={TAMUGuessr}
             alt={''}
-            formats={["avif","webp"]}
+            formats={["png","avif","webp"]}
             densities={[1,2]}
             quality={80}
             aria-hidden="true"
@@ -19,26 +19,35 @@ const techs = ['Python', 'FastF1', 'Pandas', 'NumPy', 'Linear Regression'];
     </div>
     
     <div id="project-description">
-        <h1>Formula-1 Tire Model</h1>
-        <p>By utilizing per-stint linear regression on lap data collected via FastF1, 
-            I analyzed tire compound efficiency across the entire 2024 Formula 1 season. 
-            Degradation rates and base pace were computed per driver per stint, 
-            then combined into a single efficiency score using an integral of the linear degradation model over the average stint length.
-            Across 23 dry-weather races, HARD tires were the most efficient compound at 12 circuits, 
-            particularly high-speed tracks like Silverstone, Monza, and Zandvoort, 
-            while SOFT tires dominated street circuits where shorter stints favor raw pace over durability,
-            and MEDIUM tires were optimal at 3 circuits where neither extreme dominated.
+        <h1>TAMUGuessr</h1>
+        <p>We identified that many new and current students are unfamiliar with how large their own campus is. 
+            Texas A&M spans over 5,000 acres, and as a result, 
+            most students have not been fully exposed to the campus they call home. 
+            To tackle this issue, we drew inspiration from GeoGuessr, 
+            a game that places you in a random location worldwide and challenges you to guess where you are. 
+            This model successfully exposes people to new places and motivates them to explore in person. 
+            We wanted to bring this concept to Texas A&M, creating a game with weekly themes. 
+            This approach not only helps students find new places on campus to hang out but also guides them to locations 
+            where they can connect with others who share their interests.
         </p>
         <div id="tech-stack">
             {techs.map(tech => (
                 <span class="bubble">{tech}</span>
             ))}
         </div>
-        <div id="repo-link">
-            <a href="https://github.com/Hezxkiah/F1-Tire-Model" target="_blank">
-            <p>Github</p>
-            <img src={RepoArr.src} alt="" />
-            </a>
+        <div id="links">
+            <div id="repo-link">
+                <a href="https://github.com/Hezxkiah/TAMU-Guessr" target="_blank">
+                <p>Github</p>
+                <img src={RepoArr.src} alt="" />
+                </a>
+            </div>
+            <div id="repo-link">
+                <a href="https://devpost.com/software/tamu-guessr?ref_content=my-projects-tab&ref_feature=my_projects" target="_blank">
+                <p>Devpost</p>
+                <img src={RepoArr.src} alt="" />
+                </a>
+            </div>
         </div>
     </div>
 </div>
@@ -77,6 +86,10 @@ const techs = ['Python', 'FastF1', 'Pandas', 'NumPy', 'Linear Regression'];
         font-size: 0.85rem;
         color: #ABAEB0;
         font-family: monospace;
+    }
+    #links{
+        display: flex;
+        gap: 0.5rem;
     }
     #repo-link{
         padding-top: 1.5rem;

@@ -31,15 +31,6 @@ import ProjArr from '@assets/landing/arrow-down.svg'
         margin-top: 10rem;
         margin-left: 10rem;
     }
-    @media (max-width: 768px) {
-        #Landing {
-            margin-top: 4rem;
-            margin-left: 3.5rem;
-            margin-right: 1.5rem;
-            min-height: 100vh;
-            width: auto;
-        }
-    }
     #landing-text h1 {
         font-size: clamp(1rem, 8vw, 4rem);
         text-align: left;
@@ -49,6 +40,7 @@ import ProjArr from '@assets/landing/arrow-down.svg'
         font-size: clamp(0.5rem, 8vw, 1.5rem);
         text-align: left;
     }
+    /* Dot & Status */
     #status {
         display: inline-flex;
         align-items: center;
@@ -72,6 +64,7 @@ import ProjArr from '@assets/landing/arrow-down.svg'
             box-shadow: 0 0 0 6px rgba(74, 222, 128, 0);
         }
     }
+    /* Mentions */
     #mention {
         color: #6D6F70;
         transition: color 0.2s ease;
@@ -79,6 +72,7 @@ import ProjArr from '@assets/landing/arrow-down.svg'
     #mention:hover {
         color: white;
     }
+    /* Project Button */
     #projects-scroll {
         padding-top: 1.5rem;
         display: inline-flex;
@@ -86,26 +80,32 @@ import ProjArr from '@assets/landing/arrow-down.svg'
         cursor: pointer;
         gap: 0.25rem;
     }
-
     #projects-scroll img {
         filter: brightness(0) invert(0.67);
         transition: filter 0.2s ease;
         width: 20px;
         height: 20px;
     }
-
     #projects-scroll p {
         color: #ABAEB0;
         font-size: 1rem;
         margin: 0;
         transition: color 0.2s ease;
     }
-
     #projects-scroll:hover img {
         filter: brightness(0) invert(1);
     }
-
     #projects-scroll:hover p {
         color: white;
+    }
+    /* Different screen sizes */
+    @media (max-width: 768px) {
+        #Landing {
+            margin-top: 4rem;
+            margin-left: 3.5rem;
+            margin-right: 1.5rem;
+            min-height: 100vh;
+            width: auto;
+        }
     }
 </style>
