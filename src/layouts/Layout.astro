@@ -19,16 +19,17 @@ import "../styles/global.css"
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-    	padding: 0;
-		font-family: "PT Mono", monospace;
-		margin: 0;
-		width: 100%;
-		min-height: 100vh;
-		background: linear-gradient(180deg, #1f1f21, #000000);
-		background-attachment: fixed;
-	}
+<style is:global>
+    html {
+        background: linear-gradient(180deg, #1f1f21, #000000);
+        min-height: 100%;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "PT Mono", monospace;
+        width: 100%;
+        min-height: 100vh;
+        background: transparent;
+    }
 </style>
