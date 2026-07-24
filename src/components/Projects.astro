@@ -10,7 +10,7 @@ import F1Project from '@components/projects/f1-project.astro'
 <style>
     #Projects {
         min-height: 100vh;
-        min-width: 100%;
+        min-width: auto;
         display: flex;
         align-items: center;
         justify-content: start;
@@ -18,9 +18,17 @@ import F1Project from '@components/projects/f1-project.astro'
         box-sizing: border-box;
     }
 
+    @media (max-width: 768px) {
+        #Projects {
+            padding: 2rem 1.5rem;
+        }
+    }
+
     .project-box {
         border: 2px solid #2e2e2e;
         border-radius: 16px;
         padding: 2rem;
+        width: 100%;
+        box-sizing: border-box;
     }
 </style>

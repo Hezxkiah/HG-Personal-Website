@@ -23,7 +23,6 @@ import LinkedIn from '@assets/menu/linkedin-icon.svg'
         margin-top: 5vh;
         width: 100%;
     }
-
     #menu-bar-text {
         flex: auto;
         font-size: clamp(1rem, 2vw, 2rem);
@@ -39,6 +38,19 @@ import LinkedIn from '@assets/menu/linkedin-icon.svg'
         align-items: center;
         gap: 2rem;
         padding-right: 10rem;
+    }
+    @media (max-width: 768px) {
+        #Menu {
+            align-items: center;
+            padding: 0 1.5rem;
+        }
+        #menu-bar-text {
+            margin-left: 2.5rem
+        }
+        #menu-bar-socials {
+            padding-right: 2rem;
+            gap: 1rem;
+        }
     }
     #Github,
     #Linkedin {

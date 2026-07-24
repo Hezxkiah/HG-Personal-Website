@@ -43,6 +43,23 @@ const techs = ['Python', 'FastF1', 'Pandas', 'NumPy', 'Linear Regression'];
 </div>
 
 <style>
+    @media (max-width: 768px) {
+        #project-card {
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-right: 1rem;
+        }
+
+        .img-wrap {
+            width: 100%;
+            height: 220px;
+            max-width: 100%;
+        }
+
+        #project-card h1 {
+            font-size: 1.5rem;
+        }
+    }
     #project-card {
         display: flex;
         align-items: center;
