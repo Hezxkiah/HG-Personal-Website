@@ -20,13 +20,14 @@ const techs = ['Python', 'FastF1', 'Pandas', 'NumPy', 'Linear Regression'];
     
     <div id="project-description">
         <h1>Formula-1 Tire Model</h1>
-        <p>By utilizing linear regression on lap data collected via FastF1, 
-            I concluded that in the 2024 Bahrain Grand Prix, 
-            HARD tires completed an average-length stint approximately 21 seconds faster in aggregate than SOFT tires. 
-            Despite SOFT tires offering a faster base pace, 
-            their degradation rate of 0.116 s/lap versus 0.066 s/lap for HARD meant that over a full stint, 
-            the HARD compound's durability outweighed the SOFT's early pace advantage, 
-            making it the more strategically efficient choice at this circuit.
+        <p>By utilizing per-stint linear regression on lap data collected via FastF1, 
+            I analyzed tire compound efficiency across the entire 2024 Formula 1 season. 
+            Degradation rates and base pace were computed per driver per stint, 
+            then combined into a single efficiency score using an integral of the linear degradation model over the average stint length.
+            Across 23 dry-weather races, HARD tires were the most efficient compound at 12 circuits, 
+            particularly high-speed tracks like Silverstone, Monza, and Zandvoort, 
+            while SOFT tires dominated street circuits where shorter stints favor raw pace over durability,
+            and MEDIUM tires were optimal at 3 circuits where neither extreme dominated.
         </p>
         <div id="tech-stack">
             {techs.map(tech => (
