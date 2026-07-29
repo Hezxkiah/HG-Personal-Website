@@ -10,7 +10,8 @@ import ProjArr from '@assets/landing/arrow-down.svg'
         </div>
         <h1>Software Engineer</h1>
         <p>Sophomore CS & Math major at Texas A&M. 
-            <br> Organizer for <u><a href="https://tamuhack.org/" id="mention" target="_blank">@TAMUhack</a></u> and I ship 
+            <br>I build interactive experiences and data-driven tools, always with someone on the other end in mind.
+            Currently an organizer for <u><a href="https://tamuhack.org/" id="mention" target="_blank">@TAMUhack</a></u> and I ship 
             projects on the side.
         </p>
         <div id="projects-scroll" onclick="document.getElementById('Projects').scrollIntoView({ behavior: 'smooth' })">
@@ -39,6 +40,7 @@ import ProjArr from '@assets/landing/arrow-down.svg'
         color: #ABAEB0;
         font-size: clamp(0.5rem, 8vw, 1.5rem);
         text-align: left;
+        width: 80%;
     }
     /* Dot & Status */
     #status {
@@ -101,11 +103,26 @@ import ProjArr from '@assets/landing/arrow-down.svg'
     /* Different screen sizes */
     @media (max-width: 768px) {
         #Landing {
-            margin-top: 4rem;
-            margin-left: 3.5rem;
-            margin-right: 1.5rem;
+            margin-top: 40%;
+            margin-left: 10%;
+            margin-right: 10%;
             min-height: 100vh;
             width: auto;
+        }
+        #landing-text p{
+            width: 100%;
+        }
+    }
+    @media (max-width: 1024px) {
+        #Landing {
+            margin-top: 30%;
+            margin-left: 15%;
+            margin-right: 15%;
+            min-height: 100vh;
+            width: auto;
+        }
+        #landing-text p{
+            width: 100%;
         }
     }
 </style>
