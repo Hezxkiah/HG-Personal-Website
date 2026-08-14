@@ -1,9 +1,9 @@
 ---
 import { Picture } from "astro:assets";
 import RepoArr from "@assets/projects/arrow-up-right.png";
-import F1Car from "@assets/projects/formula-1.avif";
+import F1Car from "@assets/projects/formula-1-ferrari.jpg";
 
-const techs = ["PyTorch", "Pandas", "NumPy", "Matplotlib", "Linear Regression"];
+const techs = ["PyTorch", "Pandas", "NumPy", "Matplotlib", "XGBoost"];
 ---
 <div id="project-card">
     <div class="img-wrap">
@@ -11,8 +11,6 @@ const techs = ["PyTorch", "Pandas", "NumPy", "Matplotlib", "Linear Regression"];
             src={F1Car}
             alt={''}
             formats={["avif","webp"]}
-            densities={[1,2]}
-            quality={80}
             aria-hidden="true"
             loading={"eager"}
             fetchpriority={"high"}
@@ -21,14 +19,12 @@ const techs = ["PyTorch", "Pandas", "NumPy", "Matplotlib", "Linear Regression"];
     
     <div id="project-description">
         <h1>Formula-1 Tire Model</h1>
-        <p>By utilizing per-stint linear regression on lap data collected via FastF1, 
-            I analyzed tire compound efficiency across the entire 2024 Formula 1 season. 
-            Degradation rates and base pace were computed per driver per stint, 
-            then combined into a single efficiency score using an integral of the linear degradation model over the average stint length.
-            Across 23 dry-weather races, HARD tires were the most efficient compound at 12 circuits, 
-            particularly high-speed tracks like Silverstone, Monza, and Zandvoort, 
-            while SOFT tires dominated street circuits where shorter stints favor raw pace over durability,
-            and MEDIUM tires were optimal at 3 circuits where neither extreme dominated.
+        <p> Tire and pit strategy is one of the most influential decisions a Formula 1 team can make. 
+            To explore this, I built a gradient-boosted model that ingests tire compound, 
+            an engineered efficiency score, track temperature, and track humidity to recommend an optimal tire strategy for a given race. 
+            The efficiency score combines each driver's per-stint degradation rate and base pace into a single value, 
+            derived by integrating a linear degradation model over the average stint length. Using this approach, 
+            I found HARD tires averaged 3.55% higher efficiency than SOFT and 2.03% higher than MEDIUM across the 2024 season.
         </p>
         <div id="tech-stack">
             {techs.map(tech => (

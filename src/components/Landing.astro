@@ -1,5 +1,4 @@
 ---
-import { Picture } from "astro:assets";
 import ProjArr from "@assets/landing/arrow-down.svg";
 ---
 <section id="Landing">
@@ -8,7 +7,7 @@ import ProjArr from "@assets/landing/arrow-down.svg";
             <span id="dot"></span>
             <span>Open to work!</span>
         </div> -->
-        <h1>Software Engineer</h1>
+        <h1 id="job-title">Software Engineer</h1>
         <p>Sophomore CS major at Texas A&M. Currently a technical director for <u><a href="https://tamuhack.org/" id="mention" target="_blank">@TAMUhack</a></u> and teaching assistant 
             for ENGR 102 <u><a href="https://engineering.tamu.edu/index.html" id="mention" target="_blank">@TexasA&M</a></u>.
         </p>
@@ -124,3 +123,21 @@ import ProjArr from "@assets/landing/arrow-down.svg";
         }
     }
 </style>
+
+<script>
+    import { gsap } from "gsap";
+    import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
+    
+    gsap.registerPlugin(ScrambleTextPlugin);
+    
+    gsap.to("#job-title", {
+        duration: 1.5,
+        delay: 0.2,
+        scrambleText: {
+            text: "Software Engineer",
+            chars: "upperAndLowerCase",
+            revealDelay: 0.3,
+            speed: 0.4,
+        },
+    });
+</script>
