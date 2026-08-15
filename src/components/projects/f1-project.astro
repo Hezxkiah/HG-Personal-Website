@@ -2,6 +2,7 @@
 import { Picture } from "astro:assets";
 import RepoArr from "@assets/projects/arrow-up-right.png";
 import F1Car from "@assets/projects/formula-1-ferrari.jpg";
+import RaceCarIcon from "@assets/projects/race-car.svg"
 
 const techs = ["PyTorch", "Pandas", "NumPy", "Matplotlib", "XGBoost"];
 ---
@@ -18,7 +19,7 @@ const techs = ["PyTorch", "Pandas", "NumPy", "Matplotlib", "XGBoost"];
     </div>
     
     <div id="project-description">
-        <h1>Formula-1 Tire Model</h1>
+        <h1 id="proj-title">Formula-1 Tire Model</h1>
         <p> Tire and pit strategy is one of the most influential decisions a Formula 1 team can make. 
             To explore this, I built a gradient-boosted model that ingests tire compound, 
             an engineered efficiency score, track temperature, and track humidity to recommend an optimal tire strategy for a given race. 
@@ -124,3 +125,21 @@ const techs = ["PyTorch", "Pandas", "NumPy", "Matplotlib", "XGBoost"];
         }
     }
 </style>
+
+<!-- <script>
+    import { gsap } from "gsap";
+    import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
+    
+    gsap.registerPlugin(ScrambleTextPlugin);
+    
+    gsap.to("#proj-title", {
+        duration: 1.5,
+        delay: 0.2,
+        scrambleText: {
+            text: "Formula-1 Model",
+            chars: "upperAndLowerCase",
+            revealDelay: 0.3,
+            speed: 0.4,
+        },
+    });
+</script> -->
