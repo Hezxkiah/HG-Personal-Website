@@ -20,12 +20,15 @@ const techs = ["PyTorch", "Pandas", "NumPy", "Matplotlib", "XGBoost"];
     
     <div id="project-description">
         <h1 id="proj-title">Formula-1 Tire Model</h1>
-        <p> Tire and pit strategy is one of the most influential decisions a Formula 1 team can make. 
-            To explore this, I built a gradient-boosted model that ingests tire compound, 
-            an engineered efficiency score, track temperature, and track humidity to recommend an optimal tire strategy for a given race. 
-            The efficiency score combines each driver's per-stint degradation rate and base pace into a single value, 
-            derived by integrating a linear degradation model over the average stint length. Using this approach, 
-            I found HARD tires averaged 3.55% higher efficiency than SOFT and 2.03% higher than MEDIUM across the 2024 season.
+        <p>
+            To understand how tire and pit strategy affect race outcomes, 
+            I built a linear regression model based on the base pace and degradation rate for every driver, 
+            then integrated along the average stint length to return an efficiency score. 
+            The results showed HARD tires averaged 3.55% higher efficiency than SOFT and 2.03% higher than MEDIUM. 
+            Alongside this, I developed an XGBoost regression model trained on tire age, compound, 
+            and track conditions to simulate full-race pit strategies, 
+            which was validated with race-grouped cross-validation against a 10-race holdout set. 
+            The model came within 1.2% (89.8s MAE) of actual outcomes.
         </p>
         <div id="tech-stack">
             {techs.map(tech => (
