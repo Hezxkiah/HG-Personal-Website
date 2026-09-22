@@ -1,13 +1,13 @@
 ---
 import { Picture } from "astro:assets";
 import RepoArr from "@assets/projects/arrow-up-right.png";
-import F1Car from "@assets/projects/formula-1-ferrari.jpg";
-const techs = ["Scikit", "Pandas", "NumPy", "Matplotlib", "XGBoost"];
+import HowdyHack26 from "@assets/projects/howdyhack26.png";
+const techs = ["Astro", "Next.js", "GSAP", "TailwindCSS", "Figma"];
 ---
 <div id="project-card">
     <div class="img-wrap">
         <Picture
-            src={F1Car}
+            src={HowdyHack26}
             alt={''}
             formats={["avif","webp"]}
             aria-hidden="true"
@@ -17,16 +17,11 @@ const techs = ["Scikit", "Pandas", "NumPy", "Matplotlib", "XGBoost"];
     </div>
     
     <div id="project-description">
-        <h1 id="proj-title">Formula-1 Tire Model</h1>
+        <h1 id="proj-title">HowdyHack 2026</h1>
         <p>
-            To understand how tire and pit strategy affect race outcomes, 
-            I built a linear regression model based on the base pace and degradation rate for every driver, 
-            then integrated along the average stint length to return an efficiency score. 
-            The results showed HARD tires averaged 3.55% higher efficiency than SOFT and 2.03% higher than MEDIUM. 
-            Alongside this, I developed an XGBoost regression model trained on tire age, compound, 
-            and track conditions to simulate full-race pit strategies, 
-            which was validated with race-grouped cross-validation against a 10-race holdout set. 
-            The model came within 1.2% (89.8s MAE) of actual outcomes.
+             Built frontend components for HowdyHack 2026 drawing 10,000+ site visitors. Working within the dev team, I owned the About section end-to-end and engineered the animated 
+             bubble text interactions using GSAP. Leveraged Astro's native Image component to optimize asset delivery across the landing page, improving load performance for 
+             high-traffic visitor spikes.
         </p>
         <div id="tech-stack">
             {techs.map(tech => (
@@ -34,8 +29,8 @@ const techs = ["Scikit", "Pandas", "NumPy", "Matplotlib", "XGBoost"];
             ))}
         </div>
         <div id="repo-link">
-            <a href="https://github.com/Hezxkiah/F1-Tire-Model" target="_blank">
-            <p>Github</p>
+            <a href="https://hh26.tamuhack.org/#about" target="_blank">
+            <p>Website</p>
             <img src={RepoArr.src} alt="" />
             </a>
         </div>
